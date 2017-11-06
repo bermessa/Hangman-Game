@@ -67,12 +67,21 @@ header img {
     header {
         max-width: none;
         width: 100%;
+        position: relative;
+    }
+
+    header img {
+        max-width: none;
+        height: 80%;
     }
 
     .gameName {
         max-width: none;
         width: 40%;
-        font-size: 42px;
+        font-size: 38px;
+        position: absolute;
+        top: 65%;
+        left: 31%;
     }
 
     #left,
@@ -83,4 +92,7 @@ header img {
         margin: 20px;
     }
 
+    .letter {
+        padding: 10px;
+    }
 }
