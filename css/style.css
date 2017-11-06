@@ -61,3 +61,26 @@ header img {
     color: #fbb52b;
 
 }
+
+@media screen and (max-width: 640px) {
+
+    header img {
+        max-width: none;
+        width: 80%;
+    }
+
+    .gameName {
+        max-width: none;
+        width: 40%;
+        text-align: center;
+        font-size: 42px;
+    }
+
+    #left,
+    #right {
+        max-width: none;
+        width: 90%;
+        margin: 20px;
+    }
+
+}
