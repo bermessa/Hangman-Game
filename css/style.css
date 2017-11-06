@@ -12,7 +12,7 @@ header {
 header img {
     margin-left: 50px;
     margin-right: 50px;
-    width: 900px;
+    width: 70%;
     height: 300px;
 }
 
@@ -41,7 +41,7 @@ header img {
 #left {
     text-align: center;
     border: 2px dashed #b94500;
-    width: 490px;
+    width: 45%;
     height: 310px;
     margin-left: 55px;
     margin-top: -20px;
@@ -52,7 +52,7 @@ header img {
 #right {
     text-align: left;
     border: 2px dashed #b94500;
-    width: 490px;
+    width: 45%;
     height: 310px;
     margin-left: 50px;
     margin-top: -20px;
