@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="http://www.thetherapygarden.org/wp-content/uploads/2017/10/pumpkins.jpg"></img>
+        <div class="gameName">Spooky Hangman!</div>
+    </header>
+    <br>
+
+    <div class="container">
+        <div class="row">
+
+            <div id="left" class="col-md-5">
+                <div class="row">
+                    <button id="button-a" class="letter" value="a"><h1>a</h1></button>
+                    <button id="button-b" class="letter" value="b"><h1>b</h1></button>
+                    <button id="button-c" class="letter" value="c"><h1>c</h1></button>
+                    <button id="button-d" class="letter" value="d"><h1>d</h1></button>
+                    <button id="button-e" class="letter" value="e"><h1>e</h1></button>
+                    <button id="button-f" class="letter" value="f"><h1>f</h1></button>
+                </div>
+                <div class="row">
+                    <button id="button-g" class="letter" value="g"><h1>g</h1></button>
+                    <button id="button-h" class="letter" value="h"><h1>h</h1></button>
+                    <button id="button-i" class="letter" value="i"><h1>i</h1></button>
+                    <button id="button-j" class="letter" value="j"><h1>j</h1></button>
+                </div>
+                <div class="row">
+                    <button id="button-k" class="letter" value="k"><h1>k</h1></button>
+                    <button id="button-l" class="letter" value="l"><h1>l</h1></button>
+                    <button id="button-m" class="letter" value="m"><h1>m</h1></button>
+                    <button id="button-n" class="letter" value="n"><h1>n</h1></button>
+                    <button id="button-o" class="letter" value="o"><h1>o</h1></button>
+                    <button id="button-p" class="letter" value="p"><h1>p</h1></button>
+                </div>
+                <div class="row">
+                    <button id="button-q" class="letter" value="q"><h1>q</h1></button>
+                    <button id="button-r" class="letter" value="r"><h1>r</h1></button>
+                    <button id="button-s" class="letter" value="s"><h1>s</h1></button>
+                    <button id="button-t" class="letter" value="t"><h1>t</h1></button>
+                </div>
+                <div class="row">
+                    <button id="button-u" class="letter" value="u"><h1>u</h1></button>
+                    <button id="button-v" class="letter" value="v"><h1>v</h1></button>
+                    <button id="button-w" class="letter" value="w"><h1>w</h1></button>
+                    <button id="button-x" class="letter" value="x"><h1>x</h1></button>
+                    <button id="button-y" class="letter" value="y"><h1>y</h1></button>
+                    <button id="button-z" class="letter" value="z"><h1>z</h1></button>
+                </div>
+            </div>
+
+
+            <div id="right" class="col-md-5">
+                <p>Current word:<span class="currentWord"></span></p>
+                <br>
+                <p>Letters guessed: <span class="showLetters"></span></p>
+                <br>
+                <p># of guesses remaining: <span class="guessRemain"></span></p>
+                <br>
+                <p>Wins: <span class="wins"></span></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var words = ["broomstick", "cemetery", "bones", "ghost", "skeleton"];
+        var spaces = words[Math.floor(Math.random() * words.length)];
+        var wins = 0;
+        var guesses = 10;
+        var guessedLetters = "";
+
+        // $(".currentWord").text(spaces);
+
+        // current word
+        for (var i = 0; i < words.length; i++) {
+            $(".currentWord").text(words[i]);
+        }
+
+        //letters guessed on click
+        $(".letter").on("click", function() {
+            // guessedLetters += this.value;
+            $(".showLetters").append(this.value + ", ");
+
+            if (this.value !== words) {
+                guesses--;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
